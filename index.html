@@ -56,11 +56,15 @@
         }
 
         section:nth-of-type(even) {
-           background-color: #2a1513;;
+            background-color: #2a1513;
+            ;
         }
+
         section:nth-of-type(odd) {
-           background-color: #ebddb3;;
+            background-color: #ebddb3;
+            ;
         }
+
         /* Section có video nền */
         .video-bg {
             position: relative;
@@ -105,23 +109,24 @@
         }
 
         section h2 {
-    margin-bottom: 30px;
-    text-align: center;
-    font-family: "Tilt Warp", sans-serif;
-    font-size: clamp(2.2rem, 4vw, 3rem);
-    font-weight: 800;
-    color: #fff8d6;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    position: relative;
-    display: block;
-    width: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+            font-family: "Tilt Warp", sans-serif;
+            font-size: clamp(2.2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #fff8d6;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            display: block;
+            width: 100%;
 
-text-shadow:
-    0 0 4px rgba(255, 248, 214, 0.671),
-    0 0 10px rgba(255, 224, 130, 0.459),
-    0 0 18px rgba(255, 214, 79, 0.283);
-}
+            text-shadow:
+                0 0 4px rgba(255, 248, 214, 0.671),
+                0 0 10px rgba(255, 224, 130, 0.459),
+                0 0 18px rgba(255, 214, 79, 0.283);
+        }
+
         #hoatdongxa::before,
         #hoatdongxa::after,
         #hoatdongsvtn::before,
@@ -523,14 +528,15 @@ text-shadow:
             text-indent: 2em;
             font-weight: 400;
         }
-section:nth-of-type(odd) h2 {
-    color: #5a0706;
 
-    text-shadow:
-        0 2px 3px rgba(40, 40, 40, 0.35),
-        0 4px 8px rgba(90, 7, 6, 0.30),
-        0 8px 16px rgba(60, 20, 20, 0.20);
-}
+        section:nth-of-type(odd) h2 {
+            color: #5a0706;
+
+            text-shadow:
+                0 2px 3px rgba(40, 40, 40, 0.35),
+                0 4px 8px rgba(90, 7, 6, 0.30),
+                0 8px 16px rgba(60, 20, 20, 0.20);
+        }
 
         /* SCROLL ANIMATION */
         .hidden {
@@ -816,6 +822,93 @@ section:nth-of-type(odd) h2 {
             flex: 1;
             height: 1px;
             background: #999;
+        }
+
+        .end-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: stretch;
+            /* Đảm bảo 2 thẻ cao bằng nhau */
+            justify-content: center;
+            width: 100%;
+        }
+
+        .map-section {
+            flex: 6;
+            /* Cột bản đồ to hơn */
+            min-width: 320px;
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .qr-section {
+            flex: 4;
+            /* Cột QR code */
+            min-width: 300px;
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            color: #2f4f4f;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .qr-section p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 25px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .qr-img-wrapper {
+            background: #fff;
+            padding: 10px;
+            border: 2px dashed #a0c49d;
+            border-radius: 12px;
+            margin-top: auto;
+            margin-bottom: auto;
+            /* Căn giữa ảnh theo chiều dọc */
+        }
+
+        .qr-section img {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .map-container {
+            width: 100%;
+            flex-grow: 1;
+            /* Tự động dãn đầy chiều cao thẻ */
+            min-height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         @media (max-width: 768px) {
@@ -1237,6 +1330,22 @@ section:nth-of-type(odd) h2 {
                 font-size: clamp(18px, 5vw, 28px);
                 letter-spacing: 1px;
             }
+
+            .end-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .map-section,
+            .qr-section {
+                width: 100%;
+                padding: 20px 15px;
+            }
+
+            .map-container {
+                height: 280px;
+                min-height: 280px;
+            }
         }
     </style>
 </head>
@@ -1279,7 +1388,7 @@ section:nth-of-type(odd) h2 {
         </nav>
     </header>
     <section class="hero video-bg" id="hero">
-        <h2 style = "
+        <h2 style="
     color: #5a0706;
 
 text-shadow:
@@ -1311,12 +1420,12 @@ text-shadow:
                     <img src="img5.jpg" class="thumb">
                     <img src="img6.jpg" class="thumb">
                     <img src="img7.jpg" class="thumb">
-        
+
                 </div>
             </div>
         </div>
     </section>
-    <section id="gioithieu" class="hidden" >
+    <section id="gioithieu" class="hidden">
         <h2>Giới thiệu</h2>
         <div class="about-item">
             <div class="about-img">
@@ -1379,7 +1488,8 @@ text-shadow:
             </div>
         </section>
         <section id="hoatdongsvtn" class="hidden">
-            <h2>Các hoạt động của đội SVTN trường Hoá và KHSS</h2>
+            <h2>Các hoạt động của<br>
+                đội SVTN trường Hoá và KHSS</h2>
             <div class="slider">
                 <div class="mainimage">
                     <img class="mainimg" src="hd2.jpg">
@@ -1393,7 +1503,7 @@ text-shadow:
                         <img src="hd5.jpg" class="thumb">
                         <img src="hd6.jpg" class="thumb">
                         <img src="hd7.jpg" class="thumb">
-                     
+
                     </div>
                 </div>
             </div>
@@ -1404,6 +1514,13 @@ text-shadow:
     <section id="danhsach" class="hidden">
         <figure>
             <h2 style="text-align: center;">Danh sách anh hùng liệt sĩ</h2>
+            <p style="
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 25px;
+            font-style: italic;
+            line-height: 1.5;
+            text-align:center;">(Bấm vào từng mộ để xem chi tiết thông tin)</p>
             <div class="sodo-container">
 
                 <img src="sodo.jpg" class="sodo">
@@ -1486,12 +1603,25 @@ text-shadow:
     </div>
 
     <section id="lienhe" class="hidden">
-        <h2>Địa chỉ</h2>
-        <div class="map-container">
-            <iframe
-                src="https://www.google.com/maps/place/%C4%90a%CC%80i+T%C6%B0%C6%A1%CC%89ng+Ni%C3%AA%CC%A3m+Ca%CC%81c+Anh+Hu%CC%80ng+Li%C3%AA%CC%A3t+Sy%CC%83+Phu%CC%81+La%CC%A3c/@21.6887726,105.5970119,818m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3134d0024c6c7595:0xb5fa0590592b8e5b!8m2!3d21.6887726!4d105.5970119!16s%2Fg%2F11bw2hx2r6!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDcyMS4wIKXMDSoASAFQAw%3D%3D"></iframe>"
-            loading="lazy" allowfullscreen>
-            </iframe>
+
+        <div class="end-container">
+            <!-- Cột Bản đồ -->
+            <div class="map-section">
+                <h2 class="section-title">Địa chỉ</h2>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.540444834712!2d105.5970119!3d21.6887726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134d0024c6c7595%3A0xb5fa0590592b8e5b!2zxJBhzIBpIFTGsMahzIluZyBOacOqzKNtIENhzIFjIEFuaCBIdcyAbmcgTGnDqsyjdCBTecyDIFBodcyBIExhzKNj!5e1!3m2!1svi!2s!4v1784927938486!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+            <div class="qr-section">
+                <h2 class="section-title">Khung cảnh 360°</h2>
+                <p>(Quét mã QR dưới đây để tham quan khuôn viên nghĩa trang)</p>
+                <div class="qr-img-wrapper">
+                    <img src="qr1.jpg" alt="Mã QR tham quan 360 độ">
+                </div>
+            </div>
         </div>
     </section>
 
