@@ -56,9 +56,11 @@
         }
 
         section:nth-of-type(even) {
-            background: #dbeccd;
+           background-color: #2a1513;;
         }
-
+        section:nth-of-type(odd) {
+           background-color: #ebddb3;;
+        }
         /* Section có video nền */
         .video-bg {
             position: relative;
@@ -76,7 +78,7 @@
             height: 100%;
 
             object-fit: cover;
-            opacity: 0.7;
+            opacity: 0.3;
 
             z-index: 0;
             pointer-events: none;
@@ -103,23 +105,23 @@
         }
 
         section h2 {
-            margin-bottom: 30px;
-            text-align: center;
-            font-family: "Tilt Warp", sans-serif;
-            font-size: clamp(2.2rem, 4vw, 3rem);
-            font-weight: 800;
-            color: #2f4f4f;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            position: relative;
-            display: block;
-            width: 100%;
-            text-shadow:
-                0 3px 8px rgba(45, 57, 41, 0.25),
-                0 8px 18px rgba(45, 57, 41, 0.16),
-                0 16px 36px rgba(45, 57, 41, 0.08);
-        }
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: "Tilt Warp", sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #fff8d6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+    width: 100%;
 
+text-shadow:
+    0 0 4px rgba(255, 248, 214, 0.671),
+    0 0 10px rgba(255, 224, 130, 0.459),
+    0 0 18px rgba(255, 214, 79, 0.283);
+}
         #hoatdongxa::before,
         #hoatdongxa::after,
         #hoatdongsvtn::before,
@@ -127,30 +129,13 @@
             display: none;
         }
 
-        #hoatdongxa {
-            background: #ffffe8;
-        }
-
-        #hoatdongsvtn {
-            background: #dbeccd;
-        }
 
         #hoatdongxa,
         #hoatdongsvtn {
             border: none;
         }
 
-        #danhsach {
-            background: #ffffe8;
-        }
 
-        #lienhe {
-            background: #bfe0c3;
-        }
-
-        #hero {
-            background: #f6e961;
-        }
 
         header {
             position: relative;
@@ -532,12 +517,20 @@
             max-width: 65ch;
             font-size: clamp(1.1rem, 1.6vw, 1.4rem);
             line-height: 1.5;
-            color: #3d3d3d;
+            color: white;
             text-align: justify;
             letter-spacing: 0.15px;
             text-indent: 2em;
             font-weight: 400;
         }
+section:nth-of-type(odd) h2 {
+    color: #5a0706;
+
+    text-shadow:
+        0 2px 3px rgba(40, 40, 40, 0.35),
+        0 4px 8px rgba(90, 7, 6, 0.30),
+        0 8px 16px rgba(60, 20, 20, 0.20);
+}
 
         /* SCROLL ANIMATION */
         .hidden {
@@ -1286,7 +1279,19 @@
         </nav>
     </header>
     <section class="hero video-bg" id="hero">
-        <h2>Tổng quan nghĩa trang</h2>
+        <h2 style = "
+    color: #5a0706;
+
+text-shadow:
+  
+    0 -1px 2px rgba(255, 255, 255, 0.95),
+    0 0 6px rgba(255, 250, 235, 0.9),
+    0 0 12px rgba(255, 220, 170, 0.55),
+    0 0 20px rgba(255, 210, 150, 0.35),
+    0 2px 4px rgba(40, 40, 40, 0.3),
+    0 5px 10px rgba(90, 7, 6, 0.25),
+    0 10px 20px rgba(0, 0, 0, 0.15);
+">Tổng quan nghĩa trang</h2>
         <!-- Video nền -->
         <video class="lotus-video" autoplay muted loop playsinline preload="auto">
             <source src="hoasen.mp4" type="video/mp4">
@@ -1306,12 +1311,12 @@
                     <img src="img5.jpg" class="thumb">
                     <img src="img6.jpg" class="thumb">
                     <img src="img7.jpg" class="thumb">
-                    <img src="img8.jpg" class="thumb">
+        
                 </div>
             </div>
         </div>
     </section>
-    <section id="gioithieu" class="hidden">
+    <section id="gioithieu" class="hidden" >
         <h2>Giới thiệu</h2>
         <div class="about-item">
             <div class="about-img">
@@ -1388,8 +1393,7 @@
                         <img src="hd5.jpg" class="thumb">
                         <img src="hd6.jpg" class="thumb">
                         <img src="hd7.jpg" class="thumb">
-                        <img src="hd8.jpg" class="thumb">
-                        <img src="hd9.jpg" class="thumb">
+                     
                     </div>
                 </div>
             </div>
